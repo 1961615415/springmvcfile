@@ -1,15 +1,11 @@
-package cn.knet.businesstask;
+package cn.knet.suggest;
 
 import cn.knet.domain.filter.LoggingClientHttpRequestInterceptor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.http.HttpRequest;
-import org.apache.http.client.methods.HttpRequestWrapper;
-import org.apache.http.impl.client.DefaultHttpRequestRetryHandler;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
-import org.apache.http.protocol.HttpContext;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -30,7 +26,7 @@ import java.util.List;
 @Configuration
 public class RestTemplateConfig {
 
-    private static final int HTTP_CLIENT_RETRY_COUNT = 3;
+    private static final int HTTP_CLIENT_RETRY_COUNT = 0;
 
     private static final int MAXIMUM_TOTAL_CONNECTION = 10;
 
@@ -57,7 +53,7 @@ public class RestTemplateConfig {
         connectionManager.setValidateAfterInactivity(CONNECTION_VALIDATE_AFTER_INACTIVITY_MS);
 
         clientBuilder.setConnectionManager(connectionManager);
-        //设置重连操作次数，这里设置了3次
+     /*   //设置重连操作次数，这里设置了3次
         clientBuilder.setRetryHandler(new DefaultHttpRequestRetryHandler(HTTP_CLIENT_RETRY_COUNT, true, new ArrayList<>()) {
             @Override
             public boolean retryRequest(IOException exception, int executionCount, HttpContext context) {
@@ -66,7 +62,7 @@ public class RestTemplateConfig {
                 log.info("Retry request, execution count:{}, exception:{}, request URL:{}", executionCount, exception.getMessage(), original);
                 return super.retryRequest(exception, executionCount, context);
             }
-        });
+        });*/
 //
 //        //使用httpClient创建一个ClientHttpRequestFactory的实现
         HttpComponentsClientHttpRequestFactory httpRequestFactory = new HttpComponentsClientHttpRequestFactory(clientBuilder.build());
@@ -96,7 +92,7 @@ public class RestTemplateConfig {
     @Bean
     @LoadBalanced
     public RestTemplate restTemplate() {
-        RestTemplate restTemplate = RestTemplateConfig.createRestTemplate(180000, 180000, new ObjectMapper());
+        RestTemplate restTemplate = RestTemplateConfig.createRestTemplate(120000, 120000, new ObjectMapper());
         //配置自定义的interceptor拦截器
         //使用restTemplate远程调用防止400和401导致报错而获取不到正确反馈信息
         restTemplate.setErrorHandler(new DefaultResponseErrorHandler() {

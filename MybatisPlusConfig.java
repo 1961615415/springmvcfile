@@ -1,4 +1,4 @@
-package cn.knet.wz.conf;
+package cn.knet.suggest;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
