@@ -1,0 +1,17 @@
+ //前端 window.open("${ctx}/directAccount/downloadWord?id="+d.id, "_blank");
+ public void makeGwWord(HttpServletResponse response,KnetKeywordDirectAccount d,KnetRegistrant kr) throws IOException {
+        response.reset();
+        response.setContentType("application/msword");
+        response.setCharacterEncoding("utf-8");
+        String fileName = URLEncoder.encode("企业官网验证版开通信息", "UTF-8");
+        response.setHeader("Content-disposition", "attachment;filename=" + fileName + ".doc");
+        ServletOutputStream os = response.getOutputStream();
+        Word07Writer writer = new Word07Writer();
+        // 添加段落（标题）
+        writer.addText(ParagraphAlignment.CENTER,new Font("方正小标宋简体", Font.PLAIN, 15), "开通信息");
+        writer.addText(ParagraphAlignment.LEFT,new Font("方正小标宋简体",Font.PLAIN,12),"基本信息:");
+        writer.addText(ParagraphAlignment.LEFT,new Font("宋体",Font.PLAIN,12),"版本类型:企业官网验证版");
+        writer.flush(os);
+        os.close();
+        writer.close();
+    }
