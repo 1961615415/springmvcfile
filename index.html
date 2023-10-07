@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>topdf</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="author" content="nop">
+    <meta name="generator" content="wkhtmltopdf">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+    <link href="https://cdn.bootcdn.net/ajax/libs/layui/2.8.17/css/layui.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script src="js/polyfill.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/lodash.min.js"></script>
+    <script src="js/bookjs-eazy.min.js"></script>
+</head>
+<body>
+
+    <div id="content-box" style="display: none">
+        <div data-op-type="pendants"><!-- 定义页面部件（页眉/页脚/书签/水印背景等） -->
+            <div class='pendant-title'><img src="top.png"><p>温热翁问问打开感觉到非公开</p></div>
+        </div>
+        <div data-op-type="block" class="aaaa">aaa一个标记节点法国恢复恢复韩国国会</div>
+        <button>按钮</button>
+        <div data-op-type="block">
+            <div class="z-title">一、总体评估</div>
+        </div>
+        <div data-op-type="block">
+            <div class="riskRow">
+                <div class="riskLeft">
+                    <p class="txt">品牌风险指数 <span>100</span></p>
+                    <p class="tips">（风险指数最高值100）</p>
+                    <p class="txt">总体风险等级 <span>极高 </span></p>
+                    <p class="tips">贵企业 目前<span>没有注册</span>各类.网址，<br/>尚未注册，存在风险，共<span>20</span>个</p>
+                </div>
+                <div class="riskRight">
+                    <div id="main" style="width: 400px;height:300px;"></div>
+                </div>      
+            </div>
+        </div>
+        <!-- <div data-op-type="new-page">仅仅是一个标记节点，这里的内容是不会渲染的</div> -->
+  <!--       <div data-op-type="block">bbb</div>
+        <div data-op-type="new-page">仅仅是一个标记节点，这里的内容是不会渲染的</div>
+        <div data-op-type="block">ccc</div> -->
+         <table data-op-type="block-box" class="layui-table retable" border="1" >
+                <thead>
+                <tr><th>ID</th><th>姓名</th><th>贵企业注册<br/>商标频次</th></tr>
+                </thead>
+                <tbody class="nop-fill-box">
+                <tr><td rowspan="2">1</td><td>张三</td><td>12</td></tr>
+                <tr><td>张三</td><td>12</td></tr>
+                <tr><td>3</td><td>张三</td><td>12</td></tr>
+                <tr><td>4</td><td>张三</td><td>12</td></tr>
+                <tr><td>5</td><td>张三</td><td>12</td></tr>
+                <tr><td>6</td><td>张三</td><td>12</td></tr>
+                <tr><td>7</td><td>张三</td><td>12</td></tr>
+                <tr><td>8</td><td>张三</td><td>12</td></tr>
+                <tr><td>9</td><td>张三</td><td>12</td></tr>
+                <tr><td>10</td><td>张三</td><td>12</td></tr>
+                <tr><td>1</td><td>张三</td><td>12</td></tr>
+                <tr><td>2</td><td>张三</td><td>12</td></tr>
+                <tr><td>3</td><td>张三</td><td>12</td></tr>
+                <tr><td>4</td><td>张三</td><td>12</td></tr>
+                <tr><td>5</td><td>张三</td><td>12</td></tr>
+                <tr><td>6</td><td>张三</td><td>12</td></tr>
+                <tr><td>7</td><td>张三</td><td>12</td></tr>
+                <tr><td>8</td><td>张三</td><td>12</td></tr>
+                <tr><td>9</td><td>张三</td><td>12</td></tr>
+                <tr><td>10</td><td>张三</td><td>12</td></tr>
+                <tr><td>1</td><td>张三</td><td>12</td></tr>
+                <tr><td>2</td><td>张三</td><td>12</td></tr>
+                <tr><td>3</td><td>张三</td><td>12</td></tr>
+                <tr><td>4</td><td>张三</td><td>12</td></tr>
+                <tr><td>5</td><td>张三</td><td>12</td></tr>
+                <tr><td>6</td><td>张三</td><td>12</td></tr>
+                <tr><td>7</td><td>张三</td><td>12</td></tr>
+                <tr><td>8</td><td>张三</td><td>12</td></tr>
+                <tr><td>9</td><td>张三</td><td>12</td></tr>
+                <tr><td>10</td><td>张三</td><td>12</td></tr>
+                <tr><td>1</td><td>张三</td><td>12</td></tr>
+                <tr><td>2</td><td>张三</td><td>12</td></tr>
+                <tr><td>3</td><td>张三</td><td>12</td></tr>
+                <tr><td>4</td><td>张三</td><td>12</td></tr>
+                <tr><td>5</td><td>张三</td><td>12</td></tr>
+                <tr><td>6</td><td>张三</td><td>12</td></tr>
+                <tr><td>7</td><td>张三</td><td>12</td></tr>
+                <tr><td>8</td><td>张三</td><td>12</td></tr>
+                <tr><td>9</td><td>张三</td><td>12</td></tr>
+                <tr><td>10</td><td>张三</td><td>12</td></tr>
+                <tr><td>1</td><td>张三</td><td>12</td></tr>
+                <tr><td>2</td><td>张三</td><td>12</td></tr>
+                <tr><td>3</td><td>张三</td><td>12</td></tr>
+                <tr><td>4</td><td>张三</td><td>12</td></tr>
+                <tr><td>5</td><td>张三</td><td>12</td></tr>
+                <tr><td>9</td><td>张三</td><td>12</td></tr>
+                <tr><td>10</td><td>张三</td><td>12</td></tr>
+                <tr><td>1</td><td>张三</td><td>12</td></tr>
+                <tr><td>2</td><td>张三</td><td>12</td></tr>
+                <tr><td>3</td><td>张三</td><td>12</td></tr>
+                <tr><td>4</td><td>张三</td><td>12</td></tr>
+                <tr><td>5</td><td>张三</td><td>12</td></tr>
+                <tr><td>6</td><td>张三</td><td>12</td></tr>
+                <tr><td>7</td><td>张三</td><td>12</td></tr>
+                <tr><td>8</td><td>张三</td><td>12</td></tr>
+                <tr><td>9</td><td>张三</td><td>12</td></tr>
+                <tr><td>10</td><td>张三</td><td>12</td></tr>
+                </tbody>
+            <!--     <tfoot>
+                <tr><td colspan="3">表格尾部</td></tr>
+                </tfoot> -->
+        </table>
+
+    </div>
+ <script type="text/javascript">
+    
+var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom);
+var option;
+
+option = {
+  title: {
+    text: '风险指数'
+  },
+  radar: {
+    // shape: 'circle',
+    name: {
+        textStyle: {
+            fontSize: 12,
+            color: '#626b84',
+            textAlign:"center"
+       },
+       //指示器文字换行 start
+       formatter: function(text){
+            var strlength = text.length,result="";
+            var num = text.replace(/[^\d]/g, " ");
+
+            console.log(text,num)
+
+            for(var i=1;i<= strlength;i++) {
+                if( i == 3 ) {
+                    result += text[i-1]+'\n';
+                }else {
+                    result += text[i-1];
+                }
+            }
+        
+            return result
+        }
+        //指示器文字换行 end
+    },
+    indicator: [
+      { name: '商号名56(高风险)', max: 6500 },
+      { name: '推广词56(高风险)', max: 16000 },
+      { name: '产品名56(高风险)', max: 30000 },
+      { name: '品牌名100(高风险)', max: 38000 },
+      { name: '网站名56(高风险)', max: 52000 },
+      { name: '商标名100(高风险)', max: 25000 }
+    ],
+    radius: 100
+  },
+  series: [
+    {
+      type: 'radar',
+      tooltip: {
+        trigger: 'item'
+      },
+      areaStyle: {},
+      data: [
+        {
+          value: [4200, 3000, 20000, 35000, 50000, 18000],
+          name: 'Allocated '
+        },
+        // {
+        //   value: [5000, 14000, 28000, 26000, 42000, 21000],
+        //   name: 'Actual Spending'
+        // }
+      ]
+    }
+  ]
+};
+option && myChart.setOption(option);
+ </script>
+    <script type="text/javascript">
+    document.title="1.pdf";
+        bookConfig = {
+            "pageSize": "ISO_A4",
+            "padding": "40mm 5mm 20mm 5mm",
+    // "simpleCatalog": {
+    //     "positionSelector" : ".pendant-title:first"
+    // },
+            "simplePageNum": {
+                // "pageBegin" : 1,
+                // "pageEnd" : -1,
+                "pendant": "<div class=\"page-num-simple\"><span style=\"\">第${PAGE}页 / 共${TOTAL_PAGE}页</span></div>"
+            },
+            "toolBar": {
+                // "serverPrint": false,
+                "webPrint": true,
+                // "saveHtml": true,
+
+                 "serverPrint" : {
+                     // 可选，打印服务器地址,按钮顺序index: 400
+                     "serverUrl" : 'http://10.1.134.28:30000/',
+                
+                     // 可选，true时使用wkHtmlPdf制作，false：默认使用chrome headless
+                     // **注意**：wkhtmltopdf不支持es6,缺失一些web新特性，好处在于可以生成PDF目录书签。
+                     // 为了更好的调试发现问题：请下载QtWeb浏览器,其内核于wkhtmltopdf是一样的。
+                     // 菜单->工具->启用网页检查器，右键页面内容，选择检查 进入debug工具栏
+                     // 以便发现各种兼容问题
+                     // 在QtWeb浏览器中默认为打印模式的样式。不显示页间隔，及工具栏
+                     // 下载链接：http://www.qtweb.net/download.html
+                     "wkHtmlToPdf" : false, 
+                
+                     // 可选，保存的文件名，默认值 document.title + '.pdf'
+                     //"fileName" : '2.pdf',
+                     // 可选，打印附属参数
+                     "params" : {
+                         // 打印超时时间
+                         "timeout" : 30000,
+                         // 页面渲染完成后，打印前延时
+                         "delay" : 1000,
+                     }, 
+                     // 可选，自定义下载。可用于混合APP内下载时用
+                     /*save : function(pdfUrl, serverPrintOption){
+                         console.log(pdfUrl, serverPrintOption)
+                        download(pdfUrl,'s');
+                     }*/
+                 },
+         
+                // "serverPrint" : false,
+
+            },
+            "start": true
+        }
+
+
+
+         function download(url, filename){
+              const elelink = document.createElement("a");
+              elelink.style.display = 'none';
+              elelink.target = '_blank';
+              elelink.href = url;
+              elelink.download = filename;
+              document.body.appendChild(elelink);
+              elelink.click();
+              document.body.removeChild(elelink);
+         }
+
+    </script>
+</body>
+</html>
