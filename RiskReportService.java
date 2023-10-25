@@ -1,44 +1,5 @@
-package cn.knet.boss.service;
-
-import cn.knet.boss.vo.RiskReportRecoms;
-import cn.knet.boss.vo.RiskReportRegs;
-import cn.knet.boss.vo.RiskReportVo;
-import cn.knet.domain.entity.KnetDomainRisk;
-import cn.knet.domain.entity.KnetDomainRiskRecom;
-import cn.knet.domain.enums.CategoryEnum;
-import cn.knet.domain.enums.RecomTypeEnum;
-import cn.knet.domain.enums.RegFlagEnum;
-import cn.knet.domain.enums.YnEnum;
-import cn.knet.domain.mapper.AgentProductPriceMapper;
-import cn.knet.domain.mapper.KnetDomainRiskMapper;
-import cn.knet.domain.mapper.KnetDomainRiskRecomMapper;
-import cn.knet.domain.mapper.KnetKeywordCategoryMapper;
-import cn.knet.domain.util.Validate;
-import cn.knet.domain.vo.RestResult;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import org.apache.commons.lang.StringUtils;
-import org.jetbrains.annotations.NotNull;
-import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
-import java.math.BigDecimal;
-import java.util.*;
-import java.util.concurrent.atomic.AtomicReference;
-import java.util.stream.Collectors;
-
 @Service
 public class RiskReportService {
-    @Resource
-    private SupperService supperService;
-    @Resource
-    private KnetDomainRiskMapper knetDomainRiskMapper;
-    @Resource
-    private KnetDomainRiskRecomMapper knetDomainRiskRecomMapper;
-    @Resource
-    private AgentProductPriceMapper agentProductPriceMapper;
-    @Resource
-    private KnetKeywordCategoryMapper knetKeywordCategoryMapper;
-
     public RestResult<RiskReportVo> downReport(String id) {
         Validate.checkNotNull(id, "报告id不能为空！");
         KnetDomainRisk risk = knetDomainRiskMapper.selectById(id);
