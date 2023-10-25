@@ -1,10 +1,10 @@
 import xlrd3 as x
 import csv
 import os
-path = 'C:/Users/19616/Desktop/2023年7月/'
+path = 'C:/Users/19616/Desktop/2023年9月/'
 files = os.listdir(path, )
 num = 0
-with open(path + '/gs-2023-07.csv', 'w', newline='',encoding='utf-8-sig') as file:
+with open(path + '/gs-2023-09.csv', 'w', newline='',encoding='utf-8-sig') as file:
     writer = csv.writer(file)
     for i in range(len(files)):
         if files[i][-4:] in ['xlsx']:
